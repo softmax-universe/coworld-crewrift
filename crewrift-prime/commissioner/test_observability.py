@@ -1104,7 +1104,7 @@ class CompetitionSchedulingTest(unittest.TestCase):
 class LeagueSpendLimitSyncTest(unittest.TestCase):
     """Scheduling a Competition round must sync the platform-enforced LLM spend cap.
 
-    The $10/pod/episode cap is enforced the way the platform (Metta-AI/metta) does
+    The $10/pod/episode cap is enforced the way the platform (softmax-universe/softmax) does
     it: the league's ``episode_player_pod_llm_spend_limit_usd`` setting is injected
     into each player pod's Bedrock sidecar (``BEDROCK_SIDECAR_SPEND_LIMIT_USD``) at
     episode dispatch. The commissioner writes MAX_SPEND_PER_POD_USD into that

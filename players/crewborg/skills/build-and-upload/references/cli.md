@@ -9,7 +9,7 @@ with `--help`; the CLI ships ahead of the metta checkout. Auth: `softmax login`
 
 - **linux/amd64 mandatory** — the runner (`runner.py:_assert_linux_amd64_image`) hard-fails on arm64.
 - The Dockerfile copies the `crewborg` package and sets `CMD ["python","-m","crewborg.coworld.policy_player"]`;
-  the SDK is installed from the public `Metta-AI/coworld-tools` repo (see `crewborg/coworld/Dockerfile`).
+  the SDK is installed from the public `softmax-universe/coworld-tools` repo (see `crewborg/coworld/Dockerfile`).
 - A running **Docker daemon** is required for both build and upload.
 
 ## upload — `coworld upload-policy <IMAGE> --name/-n NAME [--run TOK]... [--secret-env K=V]... [--tag K=V]... [--use-llm] [--llm-model ID] [--server]`

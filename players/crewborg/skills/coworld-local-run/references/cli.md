@@ -1,6 +1,6 @@
 # Local-run CLI reference
 
-Exact behaviour of the `coworld` commands this skill uses (source `Metta-AI/metta`:
+Exact behaviour of the `coworld` commands this skill uses (source `softmax-universe/softmax`:
 `packages/coworld/src/coworld/`, and `coworld <cmd> --help`). **Re-verified 2026-06-27:**
 `download`/`run-episode`/`replay`/`play` all present; since the original 0.1.20 pass
 `run-episode` **gained** `-n/--episodes`, `--variant`, and `--use-bedrock`/`--aws-*`.

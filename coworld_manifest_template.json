@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Metta-AI/coworld/main/src/coworld/coworld_manifest_schema.json",
+  "$schema": "https://raw.githubusercontent.com/softmax-universe/coworld/main/src/coworld/coworld_manifest_schema.json",
   "tags": ["social-deduction", "real-time", "multiplayer"],
   "game": {
     "name": "crewrift",
@@ -11,7 +11,7 @@
       "run": [
         "/bin/crewrift"
       ],
-      "source_url": "https://github.com/Metta-AI/coworld-crewrift/tree/master"
+      "source_url": "https://github.com/softmax-universe/coworld-crewrift/tree/master"
     },
     "replay_viewer": {
       "bundle": "build/static-replay-viewer",
@@ -406,17 +406,17 @@
     "protocols": {
       "player": {
         "type": "uri",
-        "value": "https://github.com/Metta-AI/bitworld/blob/master/docs/sprite_v1.md"
+        "value": "https://github.com/softmax-universe/bitworld/blob/master/docs/sprite_v1.md"
       },
       "global": {
         "type": "uri",
-        "value": "https://github.com/Metta-AI/bitworld/blob/master/docs/sprite_v1.md"
+        "value": "https://github.com/softmax-universe/bitworld/blob/master/docs/sprite_v1.md"
       }
     },
     "docs": {
       "readme": {
         "type": "uri",
-        "value": "https://github.com/Metta-AI/coworld-crewrift/blob/master/README.md"
+        "value": "https://github.com/softmax-universe/coworld-crewrift/blob/master/README.md"
       },
       "pages": [
         {
@@ -424,7 +424,7 @@
           "title": "notsus Bot Player",
           "content": {
             "type": "uri",
-            "value": "https://github.com/Metta-AI/coworld-crewrift/blob/master/players/notsus/README.md"
+            "value": "https://github.com/softmax-universe/coworld-crewrift/blob/master/players/notsus/README.md"
           }
         },
         {
@@ -432,7 +432,7 @@
           "title": "Rules",
           "content": {
             "type": "uri",
-            "value": "https://github.com/Metta-AI/coworld-crewrift/blob/master/README.md"
+            "value": "https://github.com/softmax-universe/coworld-crewrift/blob/master/README.md"
           }
         },
         {
@@ -462,7 +462,7 @@
         "--exit-on-disconnect",
         "--exit-on-game-over"
       ],
-      "source_url": "https://github.com/Metta-AI/coworld-crewrift/tree/master/players/notsus"
+      "source_url": "https://github.com/softmax-universe/coworld-crewrift/tree/master/players/notsus"
     }
   ],
   "commissioner": [
@@ -471,7 +471,7 @@
       "name": "Crewrift Social Deduction Commissioner",
       "type": "commissioner",
       "description": "Social-deduction commissioner shared with Among Them. It schedules seat-rotated episodes, computes rankings, and supports promotion-style leagues for Crewrift Daily.",
-      "source_url": "https://github.com/Metta-AI/coworld-crewrift/tree/master/commissioner",
+      "source_url": "https://github.com/softmax-universe/coworld-crewrift/tree/master/commissioner",
       "image": "coworld-crewrift-commissioner:latest"
     }
   ],
@@ -481,7 +481,7 @@
       "name": "Crewrift Grader",
       "type": "grader",
       "description": "Reference Crewrift grader that scores social-deduction episodes from wins, score spread, tasks, kills, and voting activity.",
-      "source_url": "https://github.com/Metta-AI/coworld-crewrift/tree/master/grader/graders/crewrift/crewrift_grader",
+      "source_url": "https://github.com/softmax-universe/coworld-crewrift/tree/master/grader/graders/crewrift/crewrift_grader",
       "image": "coworld-crewrift-grader:latest"
     }
   ],

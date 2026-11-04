@@ -8,7 +8,7 @@
 #   (add --platform=linux/amd64 via buildx; the cluster is amd64)
 #
 # crewborg is the `crewborg` package and imports only `players.player_sdk`
-# from the shared SDK. We install that SDK from the public Metta-AI/coworld-tools
+# from the shared SDK. We install that SDK from the public softmax-universe/coworld-tools
 # monorepo (pinned via PLAYERS_SDK_REF — pass a fixed ref for a reproducible build;
 # the ordinary build uses this fixed ref) and put the package on PYTHONPATH. We install NO lab
 # tooling, and bake NO behavior/experiment env (e.g. CREWBORG_BE_DUMB) — those are
@@ -31,7 +31,7 @@ WORKDIR /app
 # `players/` subdirectory; install from its GitHub source tarball at the pinned ref
 # (tarball = no git/submodules or local checkout needed in the build).
 RUN pip install --upgrade pip \
- && pip install "players @ https://github.com/Metta-AI/coworld-tools/archive/${PLAYERS_SDK_REF}.tar.gz#subdirectory=players"
+ && pip install "players @ https://github.com/softmax-universe/coworld-tools/archive/${PLAYERS_SDK_REF}.tar.gz#subdirectory=players"
 
 RUN pip install "httpx==0.28.1"
 

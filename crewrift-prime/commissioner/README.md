@@ -276,7 +276,7 @@ Each player pod may spend at most **$10 (estimated USD) on LLM/Bedrock calls per
 episode** (`MAX_SPEND_PER_POD_USD`, env-overridable via
 `CREWRIFT_PRIME_MAX_SPEND_PER_POD_USD`; the default is baked into the image ENV).
 Enforcement uses the **platform's own Bedrock spend-cap mechanism** (see
-`Metta-AI/metta` — `app_backend/v2/league_settings.py` and
+`softmax-universe/softmax` — `app_backend/v2/league_settings.py` and
 `job_runner/dispatcher.py`):
 
 1. The commissioner writes the cap into the league's
@@ -524,7 +524,7 @@ in `EpisodeResult.game_results` — seat-indexed arrays: `vote_players`, `kills`
   `DecisionRecord`/reason strings. Single source of truth.
 - `mmr.py` — pure OpenSkill (Plackett–Luce) MMR ranking for the Competition
   division (per policy version; `mu − 3σ`, player-prior init, 5-game placement),
-  faithful to PR Metta-AI/metta#16527. No I/O; unit-tested by `test_mmr.py`.
+  faithful to PR softmax-universe/softmax#16527. No I/O; unit-tested by `test_mmr.py`.
 - `crewrift_prime_skill_commissioner.py` — `CrewriftPrimeSkillCommissioner`
   subclass: schedules the three drills in the `skill_gate` stage, calls
   `decision.evaluate_entrants`, ranks the Competition leaderboard via `mmr.py`,
@@ -537,7 +537,7 @@ in `EpisodeResult.game_results` — seat-indexed arrays: `vote_players`, `kills`
   complete qualification/round lifecycle using a `cmr_` token.
 - `debug_decision.py` — local offline debug/decision script.
 - `Dockerfile` — installs `vendor/` + `openskill` then overlays the above.
-- `vendor/` — vendored upstream `Metta-AI/commissioners` package (see
+- `vendor/` — vendored upstream `softmax-universe/commissioners` package (see
   `vendor/VENDOR_PROVENANCE.txt`). Not modified.
 
 ## Build / run (recorded for reproducibility)
