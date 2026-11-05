@@ -1,6 +1,6 @@
 """Tests for the OpenSkill (Plackett-Luce) MMR ranking (mmr.py).
 
-Ports PR Metta-AI/metta#16527's leaderboard scenarios onto the Crewrift round
+Ports PR softmax-universe/softmax#16527's leaderboard scenarios onto the Crewrift round
 shape and the per-policy-version rater: consistent-winner ordering, placement
 gating, best-result-per-round dedup, player-prior inheritance, and empty board.
 

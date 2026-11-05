@@ -109,7 +109,7 @@ so. The **procedure, the skills/tools to use at each step, and the two gates** a
 
 crewborg builds to a `linux/amd64` Docker image (the Coworld upload contract) from
 `crewborg/coworld/Dockerfile` — `tools/build/build_player.sh` (or the **`build-and-upload`** skill).
-The image installs the shared player SDK from the public `Metta-AI/coworld-tools` repo (pinned in
+The image installs the shared player SDK from the public `softmax-universe/coworld-tools` repo (pinned in
 `tools/build/versions.env`) and runs `python -m crewborg.coworld.policy_player`. All inputs are
 public, so a build needs only Docker — no credentials.
 

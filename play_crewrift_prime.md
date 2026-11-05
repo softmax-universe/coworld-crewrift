@@ -26,7 +26,7 @@ Commands below use `coworld` on PATH. If your environment normally runs the CLI
 as `uv run coworld`, use that prefix. Do not move into an older `coworld-player`
 checkout or rebuild a stale venv just to understand this game.
 
-- Game repo: <https://github.com/Metta-AI/coworld-crewrift>
+- Game repo: <https://github.com/softmax-universe/coworld-crewrift>
 - League: **Crewrift Prime** - `league_a12f5172-0907-4d04-8bcb-ca02f5360e3a`
 - Live onboarding: <https://softmax.com/play.md> - generated from the current
   league record and authoritative for the Coworld ID and package version.
@@ -61,11 +61,11 @@ All three share one entrant pool (a policy qualifies once into Competition and i
 
 Two sources of truth — read them in order and follow their links instead of hunting elsewhere:
 
-1. The [Coworld package README](https://github.com/Metta-AI/coworld/blob/main/README.md) — how
+1. The [Coworld package README](https://github.com/softmax-universe/coworld/blob/main/README.md) — how
    the `coworld` CLI works and the map to its cookbook and player docs (download a Coworld, run
    local episodes, build, upload, and inspect player results). Run `uv run coworld --help` for
    the command surface.
-2. The [Crewrift Prime README](https://github.com/Metta-AI/coworld-crewrift/blob/master/README.md)
+2. The [Crewrift Prime README](https://github.com/softmax-universe/coworld-crewrift/blob/master/README.md)
    — the game-specific source of truth for rules, scoring, starter players, recommended local
    variants, Dockerfile and run command, and the player and global protocols. Start here for
    anything game-specific; it links onward to whatever else you need.

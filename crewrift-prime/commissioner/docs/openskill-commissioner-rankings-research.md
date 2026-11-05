@@ -2,7 +2,7 @@
 
 **Status:** Research report (no code changes).
 **Scope:** How to adopt the OpenSkill (Plackett–Luce) skill rating from upstream
-PR [Metta-AI/metta#16527](https://github.com/Metta-AI/metta/pull/16527) for the
+PR [softmax-universe/softmax#16527](https://github.com/softmax-universe/softmax/pull/16527) for the
 **Crewrift Prime** commissioner's **Competition ranking** and for a real
 **placement** notion, replacing the current cumulative win-count leaderboard.
 

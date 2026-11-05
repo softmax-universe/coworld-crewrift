@@ -50,7 +50,7 @@ games.
 
 ## Provenance
 
-Skills consolidated from `Metta-AI/optimizer-skills`. The Crewrift game skills
+Skills consolidated from `softmax-universe/optimizer-skills`. The Crewrift game skills
 and the optimize/defend playbooks were copied largely intact; `guide/SKILL.md`
 and the entry-point `AGENTS.md`/`README.md` were authored for crewborg-aaln.
 Excludes `.git`, `__pycache__`, episode data, and caches.

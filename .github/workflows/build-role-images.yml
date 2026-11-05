@@ -30,14 +30,14 @@ jobs:
       matrix:
         include:
           - name: commissioner
-            image: metta-ai/coworld-crewrift-commissioner
+            image: softmax-universe/coworld-crewrift-commissioner
             context: ./commissioner
             file: ./commissioner/commissioners/Dockerfile
             build_args: |
               COMMISSIONER_KEY=config_driven
               RULESET_STRATEGY_CONFIG_NAME=among_them
           - name: grader
-            image: metta-ai/coworld-crewrift-grader
+            image: softmax-universe/coworld-crewrift-grader
             context: ./grader
             file: ./grader/graders/crewrift/crewrift_grader/Dockerfile
             build_args: ""

@@ -13,9 +13,9 @@ Imposters blend in, use cooldown-limited kills, and survive the vote.
 
 If docs, commands, runtime behavior, logs, or replays disagree while you are
 building or submitting a Crewrift policy, preserve the evidence and file a
-GitHub issue at <https://github.com/Metta-AI/coworld-crewrift/issues>. For
+GitHub issue at <https://github.com/softmax-universe/coworld-crewrift/issues>. For
 Softmax play prompt or Coworld CLI issues, file against
-<https://github.com/Metta-AI/coworld/issues>. Include the command, league/Coworld
+<https://github.com/softmax-universe/coworld/issues>. Include the command, league/Coworld
 ids, logs or replay links, and the smallest repro instead of silently working
 around the issue.
 
@@ -34,7 +34,7 @@ not deployed** — kept only as historical reference.
 
 If you're here to **play the league**, start with the how-to-play guide — it
 tells you to adopt one of the ready-to-deploy default policies in
-[`players/`](https://github.com/Metta-AI/coworld-crewrift/tree/master/players)
+[`players/`](https://github.com/softmax-universe/coworld-crewrift/tree/master/players)
 (`crewborg`, `crewborg-aaln`, `notsus`), deploy it as-is, then optimize it:
 
 - **▶ How to play Crewrift Prime:** **[`play_crewrift_prime.md`](play_crewrift_prime.md)** —
@@ -62,14 +62,14 @@ debugging; the scalars above are what the platform gate should use.
 
 Crewrift's game server, bundled `notsus` player, reporter, and any
 Crewrift-specific commissioner should live in this repo. Shared reusable pieces
-come from <https://github.com/Metta-AI/coworld-tools>.
+come from <https://github.com/softmax-universe/coworld-tools>.
 
 If you are fixing the Crewrift commissioner, first decide whether the change is
 shared or Crewrift-specific. Shared `ruleset_strategy` fixes belong in
 `coworld-tools/commissioners`. Crewrift-specific commissioner behavior belongs
 beside this game, with `coworld_manifest_template.json` updated to point
 `commissioner[].source_url` at this repo. Do not patch the archived
-`Metta-AI/commissioners` repo.
+`softmax-universe/commissioners` repo.
 
 The complete shared Coworld package is built from this repository:
 
@@ -244,7 +244,7 @@ done
 ## Policy Starting Points
 
 Crewrift policies speak the shared Bitworld Sprite v1 protocol:
-https://github.com/Metta-AI/bitworld/blob/master/docs/sprite_v1.md
+https://github.com/softmax-universe/bitworld/blob/master/docs/sprite_v1.md
 
 The runner starts every policy with a `COWORLD_PLAYER_WS_URL` environment variable. The policy connects to that websocket,
 plays until the game ends, and exits when the runner stops it.

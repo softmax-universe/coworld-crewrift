@@ -2,7 +2,7 @@
 
 Exact behaviour of the `coworld` commands, Observatory routes, and the **qualification model**
 this skill uses. **Re-verified live 2026-06-27** (`coworld <cmd> --help`, `/observatory/openapi.json`,
-and metta source `Metta-AI/metta`). Re-check with `--help`; the CLI ships ahead of the metta
+and metta source `softmax-universe/softmax`). Re-check with `--help`; the CLI ships ahead of the metta
 checkout. Auth: `softmax login` (`load_current_token`); CLI sends `Authorization: Bearer`, raw API
 probing uses `X-Auth-Token`. The metta backend lives at repo-root `app_backend/src/metta/app_backend`.
 

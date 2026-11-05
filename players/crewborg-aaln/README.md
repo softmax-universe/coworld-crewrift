@@ -3,7 +3,7 @@
 Aaron Landy's **Crewrift league** policy — the deterministic dumb baseline with
 convict-capable vote policy, emergency-button usage, faster task routing, and
 imposter anti-camping (v2 upload; vote-deadline fix landed in v3). Source synced
-from the [`softmax/players`](https://github.com/Metta-AI/players) monorepo
+from the [`softmax/players`](https://github.com/softmax-universe/players) monorepo
 (`players/crewrift/crewborg`).
 
 ## Observatory

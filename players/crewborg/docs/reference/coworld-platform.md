@@ -122,7 +122,7 @@ the episode runner. It must:
    policy with a `COWORLD_PLAYER_WS_URL`…")
 2. **Connect and speak the game-defined player protocol** (Crewrift uses the
    sprite_v1 protocol — `game.protocols.player` in the manifest points at
-   `Metta-AI/bitworld/.../sprite_v1.md`; see [`./crewrift-protocol.md`](./crewrift-protocol.md)).
+   `softmax-universe/bitworld/.../sprite_v1.md`; see [`./crewrift-protocol.md`](./crewrift-protocol.md)).
    Observations flow from the game, actions flow from the player, until the
    episode ends.
 3. **Act only for its own slot.** The runner gives each container its own
@@ -177,7 +177,7 @@ sections actually present in this repo's manifest** (read 2026-06-26):
 
 | Section | Present? | Shape | Notes |
 | --- | --- | --- | --- |
-| `$schema` | yes | string | Points at `coworld_manifest_schema.json` on `Metta-AI/coworld` main. |
+| `$schema` | yes | string | Points at `coworld_manifest_schema.json` on `softmax-universe/coworld` main. |
 | `game` | yes (**required**) | object | Single game runnable + metadata + schemas + docs. |
 | `player[]` | yes (**required**, ≥1) | array | Only `notsus` is bundled here. |
 | `commissioner[]` | yes (optional) | array | `among-them-commissioner` (shared social-deduction commissioner). |

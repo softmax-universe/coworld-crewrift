@@ -2,7 +2,7 @@
 
 NO I/O. This module is the single source of truth for turning a Competition
 division's completed-round history into a per-policy-version Bayesian skill
-rating, faithful to upstream PR Metta-AI/metta#16527 (which added the same rater
+rating, faithful to upstream PR softmax-universe/softmax#16527 (which added the same rater
 to the platform read path for divisions whose ranking is NOT overridden).
 
 Crewrift Prime *overrides* ``rank_division`` for its Competition board, so the

@@ -477,7 +477,7 @@ _WIN_WINDOW_ROW_LIMIT = int(os.getenv("CREWRIFT_PRIME_WIN_STATE_WINDOW_ROW_LIMIT
 _FILLER_SEATS_TAG = "filler_seats"
 _FILLER_POLICY_IDS_TAG = "filler_policy_version_ids"
 # Max USD a single PLAYER POD may spend per episode (LLM/sidecar usage etc.).
-# Enforced the way the platform (`Metta-AI/metta`) does it: the league's
+# Enforced the way the platform (`softmax-universe/softmax`) does it: the league's
 # ``episode_player_pod_llm_spend_limit_usd`` setting (``leagues.settings``) is
 # read at episode dispatch and injected into each player pod's Bedrock sidecar
 # (``BEDROCK_SIDECAR_SPEND_LIMIT_USD``), which meters estimated token spend and
@@ -489,7 +489,7 @@ _FILLER_POLICY_IDS_TAG = "filler_policy_version_ids"
 MAX_SPEND_PER_POD_USD = float(os.getenv("CREWRIFT_PRIME_MAX_SPEND_PER_POD_USD", "10"))
 _MAX_SPEND_TAG = "max_spend_per_pod_usd"
 # The platform LeagueSettings field carrying the enforced per-episode
-# per-player-pod LLM spend ceiling (see Metta-AI/metta
+# per-player-pod LLM spend ceiling (see softmax-universe/softmax
 # app_backend/v2/league_settings.py); plumbed into the pod's Bedrock sidecar
 # at dispatch by the platform's job dispatcher.
 _LEAGUE_SPEND_LIMIT_SETTING = "episode_player_pod_llm_spend_limit_usd"
@@ -832,7 +832,7 @@ class CrewriftPrimeSkillCommissioner(RulesetStrategyCommissioner):
     def _sync_league_spend_limit(self, league_id: Any) -> None:
         """Ensure the platform enforces the per-pod per-episode LLM spend cap.
 
-        This is the SAME mechanism the platform (`Metta-AI/metta`) uses for
+        This is the SAME mechanism the platform (`softmax-universe/softmax`) uses for
         Bedrock spend caps: the league's
         ``episode_player_pod_llm_spend_limit_usd`` setting (``leagues.settings``,
         ``POST /v2/leagues/{league_id}/settings``) is resolved by the job

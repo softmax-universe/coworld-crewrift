@@ -176,7 +176,7 @@ events (format: [`docs/trace-logs.md`](./docs/trace-logs.md); replay them in [`v
 ## The Player SDK
 
 `players.player_sdk` is the generic two-loop agent framework crewborg builds on. It is
-**imported, not vendored**: installed from the public **`Metta-AI/coworld-tools`** monorepo
+**imported, not vendored**: installed from the public **`softmax-universe/coworld-tools`** monorepo
 (`players/` subdirectory) via a **pinned archive tarball** — see
 [`coworld/Dockerfile`](./coworld/Dockerfile) and the build pin. Crewborg imports **only**
 `players.player_sdk` from it.
@@ -196,13 +196,13 @@ source is [`coworld/Dockerfile`](./coworld/Dockerfile):
 
 | Dependency | Source | Why |
 |---|---|---|
-| **`players[bedrock]`** — the Player SDK | the public **`Metta-AI/coworld-tools`** monorepo (`players/` subdir), as a **pinned archive tarball**: `https://github.com/Metta-AI/coworld-tools/archive/<ref>.tar.gz#subdirectory=players` | the framework crewborg builds on; crewborg imports only `players.player_sdk`. The `[bedrock]` extra adds **`boto3`** for Bedrock routing (inert unless an LLM flag + Bedrock are set). |
+| **`players[bedrock]`** — the Player SDK | the public **`softmax-universe/coworld-tools`** monorepo (`players/` subdir), as a **pinned archive tarball**: `https://github.com/softmax-universe/coworld-tools/archive/<ref>.tar.gz#subdirectory=players` | the framework crewborg builds on; crewborg imports only `players.player_sdk`. The `[bedrock]` extra adds **`boto3`** for Bedrock routing (inert unless an LLM flag + Bedrock are set). |
 | `numpy`, `pydantic`, `websockets`, `cramjam` | the SDK's base deps (pulled in transitively) | masks/arrays · typed models · the websocket transport · Snappy decode |
 | **`spacy>=3.8,<3.9`** + **`click`** | PyPI | dependency-parse negation scope for the imposter chat-bandwagon signal (`strategy/meeting/chat_nlp.py`); `click` is a spaCy CLI import the slim base omits, so it's installed explicitly |
 | **`en_core_web_sm` 3.8.0** | pinned wheel from `explosion/spacy-models` | the spaCy English model the chat NLP loads (lazily, in a background thread) |
 
-> **SDK source — note the move.** The Player SDK now lives in **`Metta-AI/coworld-tools`** (the
-> old `Metta-AI/players` repo is archived). It's installed from a **tarball**, not a git source,
+> **SDK source — note the move.** The Player SDK now lives in **`softmax-universe/coworld-tools`** (the
+> old `softmax-universe/players` repo is archived). It's installed from a **tarball**, not a git source,
 > to sidestep coworld-tools' broken `co-gas` submodule that breaks recursive clones (coworld-tools
 > issue #13). The `<ref>` is **pinned** for reproducible builds — bump it deliberately, never to a
 > floating `main`.
@@ -320,7 +320,7 @@ transport tuning never do.
   read a game; **[`viewer/`](./viewer/)** — the trace-replay viewer.
 - **[`version_log.md`](./version_log.md)** — what each uploaded version changed and how it scored.
 - **Crewrift rules + the Sprite-v1 wire protocol + source pointers** — this repo
-  (`Metta-AI/coworld-crewrift`): `README.md`, `docs/sprite_v1.md`, `src/crewrift/sim.nim`, and
+  (`softmax-universe/coworld-crewrift`): `README.md`, `docs/sprite_v1.md`, `src/crewrift/sim.nim`, and
   the reference bot `players/notsus/`. The consolidated game + SDK orientation is the
   player-directory **top-level `AGENTS.md`**.
 
